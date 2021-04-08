@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ACUMEN 21 NITT</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300&display=swap" rel="stylesheet"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet"> 
+
+    <link rel="icon" href="acm.png" type="image/gif" sizes="16x16">
+</head>
+<body>
+    <section class="main">
+        <video src="video.mp4" autoplay loop ></video>
+        <header>
+            <img class="logo" src="logo.svg">
+            <img class="menu" src="menu.svg">
+        </header>
+        <div class="content">
+            <div class="title">
+                <h1>ACUMEN</h1>
+                <!-- <h1>ACUMEN<sup>21</sup></h1> -->
+                <div class="line"></div>
+            </div>
+            <div class="code">
+                <h3 class="cursor type-writing"></h3>
+            </div>
+             <a class="btn" href="About.html">Learn More</a>
+        </div>
+        <div class="social-links">
+            <a href="https://www.facebook.com/acmnittacumen">
+                <img src="facebook.svg" >
+            </a>
+            <a href="https://www.instagram.com/acm_nitt/?fbclid=IwAR2kagxQUTugKAlrc-RX13G2LQHs59zVuNfTc0yt3Hlg2k_uHYL4lEuWxeA">
+               <img src="instagram.svg" class="insta"> 
+            </a>
+           <a href="mailto:nittacm22@gmail.com">
+               <img src="gmail.svg" class="mail">
+           </a>
+        </div>
+    </section>
+    <div class="menu-content">
+        <nav class="items">
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">Gallery</a></li>
+                <li><a href="">Team</a></li>
+                <li><a href="About.html">About</a></li>
+                <li><a href="http://www.acmnitt.in/pages/Contact.html">Contact</a></li>
+                <li><a href="http://www.acmnitt.in/signup.php">Registration</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="close">Close</div>
+    <div class="logos">
+        <img  class="nitt" src="nitt.png" alt="">
+        <p class="nit-text">National Institute of Technology<br>Tiruchirappalli</p>  
+        <img class="acm" src="acm.png" alt="">
+        <p class="acm-text">Association for Computing<br>Machinery</p>  
+    </div>
+
+    <script>
+        let menu = document.querySelector(".menu");
+        let menuCon = document.querySelector(".menu-content");
+        let nav = document.querySelector(".items");
+        let close = document.querySelector(".close");
+        let type = document.querySelector(".cursor");
+
+        var codeText = ["Don't Just Code","Also Have Fun","Explore various aspects","Win exciting prizes"];
+      
+        
+        let count = 0;
+        let index = 0;
+        let text = "";
+        let letter = ""; 
+        let time = 180;
+
+     (function textChange()
+    {
+        if(count===4)
+          count=0;
+       time = 180;
+       text = codeText[count];
+       letter = text.slice(0, ++index);
+
+       type.textContent = letter;
+
+       if(letter.length === text.length)
+       {
+           count++;
+           index=0;
+           time = 1000;
+
+       }
+       setTimeout(textChange,time);
+
+    })();
+
+    menu.addEventListener('click',()=>{
+            menuCon.style.transform="translateY(0%)";
+            nav.classList.add("items-reveal");
+            close.style.display="block";
+
+        })
+        close.addEventListener('click',()=>{
+            menuCon.style.transform="translateY(-100%)";
+            close.style.display="none";
+            nav.classList.remove("items-reveal");
+            
+        })
+    </script>
+</body>
+</html>

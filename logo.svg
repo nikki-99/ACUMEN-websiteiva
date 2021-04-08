@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="192" height="57" viewBox="0 0 192 57">
+  <g id="Group_1" data-name="Group 1" transform="translate(-67 -55)">
+    <g id="Polygon_1" data-name="Polygon 1" transform="translate(67 55)" fill="#fff">
+      <path d="M 54.13729858398438 47.5 L 0.8627042770385742 47.5 L 27.49999237060547 1.005807995796204 L 54.13729858398438 47.5 Z" stroke="none"/>
+      <path d="M 27.49999237060547 2.011623382568359 L 1.725410461425781 47 L 53.27459335327148 47 L 27.49999237060547 2.011623382568359 M 27.49999237060547 0 L 55 48 L 3.814697265625e-06 48 L 27.49999237060547 0 Z" stroke="none" fill="#707070"/>
+    </g>
+    <text id="CUMEN" transform="translate(120 102)" fill="#e5e5e5" font-size="41" font-family="LeelawadeeUI-Semilight, Leelawadee UI" font-weight="300"><tspan x="0" y="0">CUMEN</tspan></text>
+  </g>
+</svg>
